@@ -70,7 +70,7 @@ export default function PeriodCalendarScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Ionicons name="arrow-back" size={24} color="black" className='pl-6 pt-10' onPress={() => router.back()}  />
+      <Ionicons name="arrow-back" size={24} color="black" className='pl-6 pt-10' onPress={() => router.push('/(main)/(periodtracking)/(tabs)')}  />
       <ScrollView contentContainerStyle={{ paddingBottom: BOTTOM_NAV_HEIGHT + 20 }}>
         <View className='pt-20 ' style={{}}>
           

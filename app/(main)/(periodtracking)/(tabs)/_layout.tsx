@@ -1,9 +1,9 @@
-import { TabIcon } from '@/components';
-import images from '@/constants/images';
-import { Tabs } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { rMS } from '@/styles/responsive';
+import { TabIcon } from "@/components";
+import images from "@/constants/images";
+import { Tabs } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { rMS } from "@/styles/responsive";
 
 const _layout = () => {
   const insets = useSafeAreaInsets();
@@ -15,7 +15,7 @@ const _layout = () => {
         tabBarHideOnKeyboard: true,
         tabBarStyle: {
           height: 70 + insets.bottom,
-          backgroundColor: 'white',
+          backgroundColor: "white",
           paddingBottom: insets.bottom,
           paddingTop: 17,
         },
@@ -31,7 +31,7 @@ const _layout = () => {
       />
       <Tabs.Screen
         name="stats"
-        initialParams={{ initialTab: 'Log' }}
+        initialParams={{ initialTab: "Log" }}
         options={{
           tabBarIcon: () => (
             <TabIcon Icon={images.StatusTabIcon} name="Stats" />
@@ -59,18 +59,19 @@ const _layout = () => {
         }}
       />
       <Tabs.Screen
-        name="logs"
+        name="profile"
         options={{
           tabBarIcon: () => (
             <TabIcon
               Icon={
                 <MaterialCommunityIcons
-                  name="file-document-outline"
-                  size={28}
-                  color={'black'}
+                  name="account-outline"
+                  className="font-semibold"
+                  size={32}
+                  color={"black"}
                 />
               }
-              name="Logs"
+              name="Profile"
             />
           ),
         }}
